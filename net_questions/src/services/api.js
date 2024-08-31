@@ -1,5 +1,5 @@
 import axios from 'axios';
-const api_url = 'https://localhost:7176/api'
+const api_url = 'https://netquestionsapi.azurewebsites.net/api'
 export const getQuestions = async () => {
     try{
     const response = await axios.get(`${api_url}/Question/get_all`)
