@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/3ebb8968-d034-427f-a812-a967c7d89244/resourceGroups/silksharp/providers/Microsoft.Web/sites/silksharp",
+    "appService.deploySubpath": "."
+}
