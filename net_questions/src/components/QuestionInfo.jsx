@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/styles.css";
 import { getQuestionLinks, getQuestion, getTimecodes } from "../services/api";
+import loading from '../images/loading.svg';
 const QuestionInfo = () => {
   const { id } = useParams();
   const [questionInfo, setQuestionInfo] = useState([]);
@@ -24,7 +25,7 @@ const QuestionInfo = () => {
     console.log(timecode);
   }, []);
   return (
-    questionInfo.questionAnswer == null ? "" : (
+    questionInfo.questionAnswer == null ? <div className="loading-div"> <img src={loading} className="loading"></img></div> : (
     <div   
       className="container-fluid mt-25"
       style={{ textDecoration: "none", color: "white" }}

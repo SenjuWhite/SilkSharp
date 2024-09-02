@@ -4,6 +4,7 @@ import {
   getTimecodes,
   getQuestion,
 } from "../services/api";
+import loading from "../images/loading.svg"
 import React, { useEffect, useState } from "react";
 import QuizGPT from "./QuizGPT";
 import {motion, AnimatePresence, delay} from "framer-motion";
@@ -40,7 +41,7 @@ const Quiz = () => {
     setTimecode(timecodeResult.data);
   };
   return (
-    questionInfo.questionAnswer == null ? "" : (
+    questionInfo.questionAnswer == null ? <div className="loading-div"> <img src={loading} className="loading"></img></div> : (
       <AnimatePresence>
     <motion.div initial={{opacity:0}} animate={{opacity:1}} 
       className="container-fluid mt-25"

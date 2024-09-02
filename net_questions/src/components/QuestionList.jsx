@@ -3,6 +3,7 @@ import { getQuestions } from "../services/api";
 import "../styles/styles.css";
 import { Link } from "react-router-dom";
 import {motion, AnimatePresence} from "framer-motion";
+import loading from '../images/loading.svg'
 const QuestionList = () => {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -63,7 +64,8 @@ const QuestionList = () => {
   }, []);
 
   return (
-    <AnimatePresence>
+    data.length == 0 ? <div className="loading-div"> <img src={loading} className="loading"></img></div> : (
+    <AnimatePresence>  
     <motion.div  initial={{opacity:0}} animate={{opacity:1}}  className="container-fluid ">
       <div className="row">
         <div className=" col-5 col-2-5">
@@ -71,6 +73,7 @@ const QuestionList = () => {
           <span className="" style={{ fontWeight: "bold", color: "white" }}>
             Фільтр
           </span>
+         
           <select
             className="form-select mt-2 "
             onChange={(e) => {
@@ -221,6 +224,7 @@ const QuestionList = () => {
       </div>
     </motion.div>
     </AnimatePresence>
+    )
   );
 };
 

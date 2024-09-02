@@ -4,6 +4,7 @@ import { getInterviews, getQuestions } from "../services/api";
 import "../styles/styles.css";
 import { Link } from "react-router-dom";
 import {motion, AnimatePresence, delay} from "framer-motion";
+import loading from '../images/loading.svg'
 const Interviews = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -19,6 +20,7 @@ const Interviews = () => {
   }, []);
 
   return (
+    data.length == 0 ? <div className="loading-div"> <img src={loading} className="loading"></img></div> : (
     <AnimatePresence>
     <motion.div  initial={{opacity:0}} animate={{opacity:1}} className="container-fluid mt-25">
       <div className="row">
@@ -85,6 +87,7 @@ const Interviews = () => {
       </div>
     </motion.div >
     </AnimatePresence>
+    )
   );
 };
 
