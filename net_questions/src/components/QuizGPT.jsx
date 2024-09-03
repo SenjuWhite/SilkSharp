@@ -7,9 +7,6 @@ const QuizGPT = (props) => {
     const API_KEY = process.env.REACT_APP_GPT_KEY;
     const [typing,setTyping] = useState(false);
     const questionInfo = String(props.question);
-    console.log(process.env.REACT_APP_GPT_KEY);
-    console.log("key")
-    
    useEffect(()=> {
    const resetMessages = [messages[0]];
     setMessages(resetMessages);
