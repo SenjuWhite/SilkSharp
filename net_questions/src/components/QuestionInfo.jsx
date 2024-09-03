@@ -68,7 +68,7 @@ const QuestionInfo = () => {
               </thead>
               <tbody>
                 {questionLink.map((ql) => (
-                  <tr className="table-active  border-top-green ">
+                  <tr className="table-active  border-top-green tr-hover">
                     <td>
                       <a
                         href={ql}
@@ -97,7 +97,7 @@ const QuestionInfo = () => {
             </thead>
             <tbody>
               {timecode.map((tc) => (
-                <tr className="table-active  border-top-green ">
+                <tr className="table-active  border-top-green tr-hover ">
                   <td>
                     <a
                       className="truncated-text"

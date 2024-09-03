@@ -16,6 +16,7 @@ root.render(
    
     <Header/>
     <Routes>
+    <Route path='/parking.php'element={<QuestionList></QuestionList>}></Route>
       <Route path='/'element={<QuestionList></QuestionList>}></Route>
       <Route path='/questionInfo/:id'element={<QuestionInfo></QuestionInfo>}></Route>
       <Route path='/quiz' element={<Quiz></Quiz>}></Route>

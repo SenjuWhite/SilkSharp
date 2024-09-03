@@ -119,7 +119,7 @@ const QuestionList = () => {
                   (
                     <tr
                    
-                      className="table-active  border-top-green"
+                      className="table-active  border-top-green tr-hover"
                       key={question.questionId}
                     >
                       <td className="text-center">

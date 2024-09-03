@@ -41,7 +41,7 @@ const Interviews = () => {
                   
                   (
                     <tr
-                      className="table-active  border-top-green"
+                      className="table-active  border-top-green tr-hover"
                       key={interview.interviewId}
                     >
                       

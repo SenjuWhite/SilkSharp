@@ -10,10 +10,14 @@
   border-top: 1px solid ; 
   border-color: var(--success-color);
 }
-tr:hover{
+/* tr:hover{
   border-top: 3px solid var(--success-color);
   border-bottom: 3px solid var(--success-color);
-}
+} */
+ .tr-hover:hover{
+  border-top: 3px solid var(--success-color);
+  border-bottom: 3px solid var(--success-color); 
+ }
 .border-white {
   border: 1px solid;
   border-radius: 10px;
